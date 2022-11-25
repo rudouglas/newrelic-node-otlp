@@ -18,7 +18,7 @@ const sdk = new opentelemetry.NodeSDK({
   instrumentations: [getNodeAutoInstrumentations()],
 });
 sdk.start();
-const PORT = parseInt(process.env.PORT || "8080");
+const PORT = parseInt(process.env.PORT || "3333");
 const app = express();
 
 app.get("/", (req, res) => {
