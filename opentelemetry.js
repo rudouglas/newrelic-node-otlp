@@ -46,13 +46,13 @@ const instrumentations = [getNodeAutoInstrumentations()];
 
 // this endpoint contains a path since this exporter is signal specific (traces)
 // see more details here: https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-quick-start/#note-endpoints
-const url = "https://otlp.nr-data.net:4317/v1/traces";
+const url = "https://localhost:4317/v1/traces";
 
 const collectorOptions = {
   url,
-  headers: {
-   'api-key': process.env.NRIA_LICENSE_KEY
-  }
+  // headers: {
+  //  'api-key': process.env.NRIA_LICENSE_KEY
+  // }
 }
 
 const traceExporter = new OTLPTraceExporter(collectorOptions);
