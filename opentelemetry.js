@@ -46,7 +46,7 @@ const instrumentations = [getNodeAutoInstrumentations()];
 
 // this endpoint contains a path since this exporter is signal specific (traces)
 // see more details here: https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-quick-start/#note-endpoints
-const url = "https://localhost:4317/v1/traces";
+const url = "https://0.0.0.0:4317/v1/traces";
 
 const collectorOptions = {
   url,
